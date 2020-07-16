@@ -1,0 +1,40 @@
+@import '../sass/variables/colors';
+
+.header-bottom {
+  &__search-form {
+    border-radius: 2px;
+    padding: 0.1rem;
+    background-color: $color-dark-blue-1;
+
+    input,
+    .btn {
+      border: none;
+      padding: 1rem;
+      background: transparent;
+      border-radius: 0.5rem;
+      color: $color-grey-light;
+      font-size: 2rem;
+
+      i {
+        color: $color-light-blue;
+        font-size: 2rem;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &:hover {
+      background-color: $color-dark-blue-2;
+    }
+  }
+
+  input::placeholder {
+    color: $color-light-blue;
+  }
+
+  .btn:hover {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,25 @@
+@import '../../../shared/sass/variables/colors';
+
+.tutor-finder {
+  &__fast {
+    text-align: center;
+
+    h3 {
+      background-color: $color-light-blue;
+    }
+  }
+
+  &__tutors-base {
+    background-color: $color-pink;
+
+    i {
+      color: $color-orange-light;
+    }
+  }
+
+  &__fast-btn {
+    background-color: $color-dark-blue;
+
+    width: 100%;
+  }
+}

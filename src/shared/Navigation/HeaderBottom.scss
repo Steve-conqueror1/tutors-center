@@ -1,0 +1,10 @@
+@import '../sass/variables/colors';
+.header-bottom {
+  background-color: $color-dark-blue;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

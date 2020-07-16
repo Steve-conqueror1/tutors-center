@@ -1,0 +1,65 @@
+@import '../../../shared/sass/variables/colors';
+
+.reviews {
+  &__header {
+    text-align: center;
+
+    h2 {
+      text-transform: uppercase;
+      color: $color-black-dark;
+      font-size: 4rem;
+      letter-spacing: 0.2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: $color-grey-dark;
+      font-size: 2rem;
+      letter-spacing: 0.1rem;
+    }
+  }
+
+  &__scroll {
+    display: flex;
+    justify-content: center;
+
+    .fas {
+      margin: 4rem;
+      color: $color-pink;
+      font-size: 3.4rem;
+      transition: all 0.2s;
+
+      &:hover {
+        cursor: pointer;
+        color: $color-pink-light;
+      }
+    }
+    .fas.scroll-end {
+      color: $color-grey-dark;
+      display: none;
+    }
+  }
+
+  &__tutor-finder {
+    text-decoration: none;
+    display: inline-block;
+    background-color: $color-light-blue;
+    color: $color-white-primary;
+    font-size: 2rem;
+    border-radius: 0.2rem;
+
+    text-align: center;
+    padding: 1rem 8rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1rem;
+    transition: all 0.2s;
+
+    &:hover {
+      color: $color-grey-primary;
+      background-color: $color-dark-blue;
+    }
+  }
+
+  margin-bottom: 8rem;
+}

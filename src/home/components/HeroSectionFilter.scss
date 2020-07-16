@@ -1,0 +1,60 @@
+@import '../../shared/sass/variables/colors';
+
+.filter-form {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-gap: 2rem;
+
+  & .subjects,
+  & .cities,
+  & .btn-submit {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    color: $color-black-dark;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  & .btn-submit {
+    color: $color-white-primary;
+    background-color: $color-orange;
+    border: 1px solid $color-orange;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: $color-orange-light;
+    }
+    i {
+      padding: 1rem;
+    }
+  }
+}
+
+.change-city {
+  text-align: center;
+  padding: 2rem;
+  p {
+    letter-spacing: 0.2rem;
+    font-size: 2rem;
+
+    span {
+      border-bottom: 1px solid $color-pink;
+      padding: 0.2rem;
+      margin-left: 2rem;
+      color: $color-pink;
+      transition: all 0.2s;
+
+      &:hover {
+        cursor: pointer;
+        color: $color-pink-light;
+      }
+    }
+  }
+}

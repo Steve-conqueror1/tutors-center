@@ -1,0 +1,30 @@
+@import '../sass/variables/colors';
+.personal-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h2 {
+    text-transform: uppercase;
+    margin: 2.5rem;
+    color: $color-white-primary;
+
+    &:hover {
+      cursor: pointer;
+      color: $color-grey-light;
+    }
+  }
+
+  i {
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: 0.5rem;
+    border: 1px solid $color-white-primary;
+
+    &:hover {
+      cursor: pointer;
+      color: $color-grey-light;
+      border: 1px solid $color-grey-light;
+    }
+  }
+}

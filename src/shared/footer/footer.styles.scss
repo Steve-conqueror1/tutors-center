@@ -1,0 +1,68 @@
+@import '../sass/variables/colors';
+
+.footer {
+  background-color: $color-black-light;
+  padding: 3rem;
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &--item {
+    margin-right: 4rem;
+    a {
+      text-decoration: none;
+      color: $color-grey-dark;
+    }
+    p {
+      font-size: 1.2rem;
+      color: $color-grey-dark;
+    }
+  }
+
+  &__company-logo {
+    img {
+      margin-bottom: 1rem;
+    }
+
+    address {
+      font-size: 2.2rem;
+      color: $color-grey-primary;
+    }
+  }
+
+  &__contacts {
+    margin-left: 1.4rem;
+    font-size: 1.6rem;
+    color: $color-grey-dark;
+
+    .marker {
+      color: $color-orange;
+      margin: 1rem;
+    }
+  }
+
+  &__apps {
+    display: flex;
+
+    div {
+      margin: 0.4rem;
+      border: 1px solid $color-black-dark;
+      padding: 0.4rem;
+      border-radius: 0.1rem;
+    }
+  }
+
+  &__copyright {
+    align-self: flex-end;
+    font-size: 1.4rem;
+    color: $color-grey-dark;
+  }
+}

@@ -1,0 +1,26 @@
+/*-----------------------*/
+/*-------COLORS---------*/
+/*-----------------------*/
+$color-grey-primary: #f1f2f6;
+$color-white-primary: #fff;
+$color-purple-primary: #17c0eb;
+
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  background-color: $color-grey-primary;
+  color: $color-white-primary;
+  margin: 0;
+  position: relative;
+}
