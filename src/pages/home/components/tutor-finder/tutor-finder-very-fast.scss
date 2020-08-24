@@ -1,0 +1,13 @@
+@import '../../../../shared/sass/variables/colors';
+.tutor-finder {
+  &__very-fast {
+    text-align: center;
+    h3 {
+      background-color: $color-orange;
+    }
+  }
+
+  &__faster-btn {
+    background-color: $color-orange-light;
+  }
+}

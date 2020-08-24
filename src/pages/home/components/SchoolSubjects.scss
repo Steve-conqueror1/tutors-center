@@ -1,0 +1,11 @@
+@import '../../../shared/sass/variables/colors';
+
+.section-subjects {
+  &__secondary {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-rows: repeat(3, 6rem);
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+  }
+}

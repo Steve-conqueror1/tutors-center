@@ -1,0 +1,73 @@
+@import '../../../shared/sass/variables/colors';
+.tutors {
+  &__path {
+    color: $color-grey-dark;
+    margin-right: 0.4rem;
+    span {
+      color: $color-black-dark;
+      margin-left: 0.4rem;
+    }
+  }
+
+  &__header {
+    color: $color-black-dark;
+    font-size: 4rem;
+
+    span {
+      font-size: 2rem;
+      color: $color-white-primary;
+      background-color: $color-light-blue;
+      padding: 0.2rem 2rem;
+      border-radius: 2rem;
+    }
+  }
+
+  &__detail {
+    display: grid;
+    grid-gap: 5rem;
+    grid-template-columns: 2fr 8fr;
+  }
+  &__sorting {
+    .part {
+      &__header {
+        color: $color-black-dark;
+        &.last {
+          text-align: center;
+          span {
+            color: $color-light-blue;
+          }
+        }
+      }
+
+      &__rating {
+        color: $color-orange;
+        font-size: 2rem;
+        text-align: center;
+      }
+    }
+    .filter__part {
+      background-color: $color-white-secondary;
+      color: $color-grey-dark;
+      padding: 2rem;
+      border-radius: 0.6rem;
+      margin-bottom: 4rem;
+
+      i {
+        color: $color-light-blue;
+      }
+    }
+
+    p {
+      color: $color-grey-dark;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__list {
+    .list__header {
+      font-size: 3rem;
+      color: $color-black-dark;
+    }
+  }
+}

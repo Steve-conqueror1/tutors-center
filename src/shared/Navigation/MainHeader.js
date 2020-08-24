@@ -4,13 +4,13 @@ import './MainHeader.scss';
 import HeaderTop from './HeaderTop';
 import HeaderBottom from './HeaderBottom';
 
-const MainHeader = () => {
+const MainHeader = (props) => {
   return (
     <div className="header">
       <div className="container">
         <HeaderTop image={logo} />
       </div>
-      <HeaderBottom />
+      <HeaderBottom authUser={props.authUser} />
     </div>
   );
 };

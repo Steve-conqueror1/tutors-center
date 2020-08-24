@@ -1,0 +1,108 @@
+@import '../../shared/sass/variables/colors';
+
+.registration {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-white-primary-dark;
+  padding: 1.5rem auto;
+
+  &__header {
+    color: $color-black-dark;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+  }
+
+  &__form {
+    .form {
+      margin: 3rem auto;
+      display: flex;
+      flex-direction: column;
+
+      &__fields {
+        display: flex;
+        justify-content: space-between;
+        // flex-wrap: wrap;
+      }
+
+      &__control {
+        margin: 3.6rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+        position: relative;
+
+        label,
+        h4 {
+          color: $color-grey-dark;
+          font-size: 1.8rem;
+        }
+
+        input,
+        select {
+          background-color: $color-grey-light;
+          border: 1px solid $color-grey-light;
+        }
+
+        input[type='file'] {
+          display: none;
+        }
+
+        .custom-file-upload {
+          display: flex;
+          justify-content: space-between;
+          padding: 0.8rem 2rem;
+          border-radius: 0.2rem;
+          margin-bottom: 3rem;
+
+          font-size: 1.5rem;
+          color: $color-grey-dark;
+          background-color: $color-grey-light;
+
+          i {
+            color: $color-green-dark;
+            font-size: 2rem;
+            font-weight: 700;
+          }
+
+          span {
+            text-transform: uppercase;
+            color: $color-orange;
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        .img-name,
+        .image-error {
+          position: absolute;
+          right: 0;
+          bottom: 0rem;
+        }
+
+        .img-name {
+          color: $color-green-dark;
+          font-size: 2rem;
+        }
+
+        .image-error {
+          color: $color-danger;
+          font-size: 1.2rem;
+        }
+      }
+
+      &__submit {
+        align-self: center;
+        font-size: 2rem 0;
+        margin: 2rem;
+
+        input {
+          background-color: $color-green-dark;
+          border: 1px solid $color-green-dark;
+          font-size: 2rem;
+          padding: 1.4rem 5rem;
+        }
+      }
+    }
+  }
+}

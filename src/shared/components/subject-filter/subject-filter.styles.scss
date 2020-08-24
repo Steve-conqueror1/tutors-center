@@ -1,0 +1,15 @@
+@import '../../sass/variables/colors';
+.subjects {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  color: $color-black-dark;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

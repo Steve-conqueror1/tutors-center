@@ -1,0 +1,23 @@
+@import '../../../shared/sass/variables/colors';
+input {
+  padding: 0.8rem 2rem;
+  border-radius: 0.2rem;
+  border-width: 1px;
+  font-size: 1.5rem;
+  color: $color-grey-dark;
+
+  &:focus {
+    outline: none;
+  }
+  &[type='submit'] {
+    color: $color-white-primary;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &[type='date']:hover {
+    cursor: pointer;
+  }
+}
