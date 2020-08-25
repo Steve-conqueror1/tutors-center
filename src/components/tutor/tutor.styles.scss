@@ -1,0 +1,106 @@
+@import '../../shared/sass/variables/colors';
+.tutor {
+  background-color: $color-white-primary;
+  padding: 1.6rem;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 6fr 2fr;
+  grid-gap: 2.8rem;
+
+  &__detail {
+    display: flex;
+    // justify-content: space-between;
+  }
+
+  &__profile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__photo {
+    width: 10rem;
+    height: 15rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-right: 2rem;
+  }
+
+  &__bio {
+    h1 {
+      color: $color-black;
+      span {
+        color: $color-dark-blue;
+      }
+    }
+  }
+
+  &__cost {
+    text-align: center;
+
+    &__per-hour {
+      color: $color-black;
+    }
+
+    .tutor__status {
+      color: $color-green-dark;
+      letter-spacing: 0.2rem;
+      span {
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  &__contacts {
+    h2 {
+      margin-bottom: 4rem;
+      color: $color-black-light;
+      padding-bottom: 0.5rem;
+      border-bottom: 0.4rem solid $color-orange;
+      display: inline;
+      letter-spacing: 0.2rem;
+      font-size: 2rem;
+    }
+
+    &__contact {
+      font-size: 1.2rem;
+      color: $color-light-blue;
+      &:first-of-type {
+        margin-top: 2rem;
+      }
+
+      i {
+        margin-right: 1rem;
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &__experience {
+    color: $color-black-light;
+  }
+
+  &__subject,
+  &__location {
+    color: $color-grey-dark;
+    i {
+      color: $color-dark-blue;
+      margin-right: 2rem;
+    }
+  }
+
+  &__review {
+    h1 {
+      color: $color-black-dark;
+    }
+    background-color: $color-grey-light;
+    border-radius: 2rem;
+    padding: 2rem;
+    margin-top: 2rem;
+    p {
+      color: $color-grey-dark;
+      font-size: 1.6rem;
+      letter-spacing: 0.2rem;
+    }
+  }
+}

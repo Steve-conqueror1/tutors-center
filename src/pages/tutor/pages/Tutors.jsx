@@ -1,39 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import SubjectFilter from '../../../shared/components/subject-filter/subject-filter.components';
+import Rating from '../../../components/shared/rating/rating.component';
+import Tutor from '../../../components/tutor/tutor.component';
+import subjects from '../../../data/subjects';
+import cities from '../../../data/cities';
+import DataFilter from '../../../components/shared/input/select.components';
 
 import './Tutors.scss';
 
-let subjects = {
-  schoolSubjects: [
-    'mathematics',
-    'Chemistry',
-    'Information Technology',
-    'Physics',
-    'Biology',
-    'Programming',
-    'Russian Language',
-    'Social Studies',
-    'Music',
-    'Literature',
-    'History',
-    'Geography',
-  ],
-  languages: [
-    'English',
-    'Spanish',
-    'Japanese',
-    'Germany',
-    'Italian',
-    'Chinese',
-    'Russian for Foreiners',
-    'French',
-  ],
-};
-
-const learnSubject = [...subjects.schoolSubjects];
-
 const Tutors = (props) => {
   const [users, setUsers] = useState([]);
+
+  const [subject, setSubject] = useState('');
+  const [region, setRegion] = useState('');
 
   let dataLength = users.length;
 
@@ -52,11 +30,15 @@ const Tutors = (props) => {
 
   console.log('dataLength', dataLength);
 
-  const renderedTutors = users.map((user, index) => (
-    <div className="" key={index}>
-      <h1>Tutors {user.firstname}</h1>
-    </div>
-  ));
+  const handleSubjectChange = (e) => {
+    console.log(e.target.value);
+    setSubject(e.target.value);
+  };
+
+  const handleRegionChange = (e) => {
+    console.log(e.target.value);
+    setRegion(e.target.value);
+  };
 
   return (
     <div className="tutors container">
@@ -76,36 +58,35 @@ const Tutors = (props) => {
           <h1 className="part__header">Subjects</h1>
           <div className="filter__part">
             <h3>Choose the subject you would like to learn</h3>
-            <SubjectFilter />
+            <DataFilter
+              items={subjects}
+              message="Choose subject"
+              name="subject"
+              customClass="tutor-select"
+              value={subject}
+              onChange={handleSubjectChange}
+            />
           </div>
 
           <h1 className="part__header">City</h1>
           <div className="filter__part">
             <h3>Choose your city from the list</h3>
-            <SubjectFilter />
+            <DataFilter
+              items={cities}
+              message="Choose your city"
+              name="city"
+              customClass="tutor-select"
+              value={region}
+              onChange={handleRegionChange}
+            />
           </div>
 
           <hr />
           <h2 className="part__header last">
             Average Rating: <span>4.7</span>{' '}
           </h2>
-          <h4 className="part__rating">
-            <span>
-              <i className="fas fa-star"></i>
-            </span>
-            <span>
-              <i className="fas fa-star"></i>
-            </span>
-            <span>
-              <i className="fas fa-star"></i>
-            </span>
-            <span>
-              <i className="fas fa-star"></i>
-            </span>
-            <span>
-              <i className="fas fa-star"></i>
-            </span>
-          </h4>
+          <Rating size={2} />
+
           <p>Averarage ratings of all tutors found on our platform</p>
           <hr />
         </div>
@@ -113,13 +94,8 @@ const Tutors = (props) => {
           <h1 className="list__header">
             Here is the list of available tutors for you
           </h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-            harum vero ducimus ratione earum sunt corrupti libero a. Beatae
-            repellat inventore provident itaque iste, quam laudantium quos
-            laborum eum natus!
-          </p>
-          {renderedTutors}
+
+          <Tutor tutors={users} subject={subject} region={region} />
         </div>
       </div>
     </div>

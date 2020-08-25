@@ -4,7 +4,7 @@ import './select.styles.scss';
 const Select = (props) => (
   <React.Fragment>
     <select
-      className="select-items"
+      className={`select-items ${props.customClass}`}
       name={props.name}
       value={props.value}
       form="filter-form"

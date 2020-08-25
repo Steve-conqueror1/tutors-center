@@ -38,12 +38,6 @@
           }
         }
       }
-
-      &__rating {
-        color: $color-orange;
-        font-size: 2rem;
-        text-align: center;
-      }
     }
     .filter__part {
       background-color: $color-white-secondary;
@@ -54,6 +48,22 @@
 
       i {
         color: $color-light-blue;
+      }
+
+      .tutor-select {
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        font-size: 2rem;
+        color: $color-black-dark;
+        margin-top: 2rem;
+
+        &:focus {
+          outline: none;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
 
