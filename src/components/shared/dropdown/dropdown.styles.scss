@@ -1,0 +1,42 @@
+@import '../../../shared/sass/variables/colors';
+
+.dropdown {
+  position: absolute;
+  top: 4.8rem;
+  left: -5rem;
+  padding: 1rem 0 0rem 0;
+  height: 20rem;
+  max-height: 20rem;
+  width: 20rem;
+  max-width: 20rem;
+  color: $color-black-light;
+  background-color: rgba($color-white-primary, 1);
+  border-radius: 0.4rem;
+  clip-path: polygon(43% 0, 50% 5%, 100% 5%, 100% 100%, 0 100%, 0 5%, 37% 5%);
+  overflow-y: scroll;
+  box-shadow: 4rem 4rem 4rem $color-black;
+  z-index: 1000;
+
+  &__subject {
+    &:first-child {
+      margin-top: 2rem;
+    }
+
+    &:not(:first-child) {
+      margin-top: -1rem;
+    }
+
+    h4 {
+      color: $color-grey-dark;
+      font-size: 1.4rem;
+      padding: 0.6rem 2rem;
+      font-weight: 400;
+      margin-top: 0;
+    }
+
+    &:hover {
+      color: $color-black-dark;
+      background-color: $color-grey-light;
+    }
+  }
+}
