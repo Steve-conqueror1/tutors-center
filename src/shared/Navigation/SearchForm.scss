@@ -1,10 +1,12 @@
 @import '../sass/variables/colors';
+@import '../sass/mixins/mixins';
 
 .header-bottom {
   &__search-form {
     border-radius: 2px;
     padding: 0.1rem;
     background-color: $color-dark-blue-1;
+    position: relative;
 
     input,
     .btn {
@@ -14,6 +16,9 @@
       border-radius: 0.5rem;
       color: $color-grey-light;
       font-size: 2rem;
+      @include respond-phone {
+        padding: 0.8rem;
+      }
 
       i {
         color: $color-light-blue;
@@ -23,6 +28,11 @@
       &:focus {
         outline: none;
       }
+    }
+
+    .btn {
+      position: absolute;
+      right: 0.2rem;
     }
 
     &:hover {
