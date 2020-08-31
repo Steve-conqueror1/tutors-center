@@ -1,0 +1,14 @@
+@import '../variables/colors';
+
+//MEDIA QUERY MANAGER
+@mixin respond-phone {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin first-break {
+  @media (max-width: 8000px) {
+    @content;
+  }
+}

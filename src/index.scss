@@ -1,3 +1,5 @@
+@import './shared/sass/mixins/mixins';
+
 /*-----------------------*/
 /*-------COLORS---------*/
 /*-----------------------*/
@@ -14,6 +16,10 @@ $color-purple-primary: #17c0eb;
 
 html {
   font-size: 62.5%;
+
+  @include respond-phone {
+    font-size: 50%;
+  }
 }
 
 body {
